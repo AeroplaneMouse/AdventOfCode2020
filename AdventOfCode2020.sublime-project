@@ -9,8 +9,19 @@
     [
         {
             "name": "Python",
-            "cmd": ["python", "$file"],
             "selector": "source.python",
+            "shell": true,
+            "variants":
+            [
+                {
+                    "name": "Sublime",
+                    "cmd": ["python", "$file"],
+                },
+                {
+                    "name": "cmd",
+                    "cmd": ["start", "cmd", "/k", "python", "$file"],
+                }
+            ]
         }
     ]
 }
